@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8AB8A25A182EACDA0033C75A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB8A259182EACDA0033C75A /* Foundation.framework */; };
+		8AB8A25C182EACDA0033C75A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB8A25B182EACDA0033C75A /* CoreGraphics.framework */; };
+		8AB8A25E182EACDA0033C75A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB8A25D182EACDA0033C75A /* UIKit.framework */; };
+		8AB8A260182EACDA0033C75A /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB8A25F182EACDA0033C75A /* SpriteKit.framework */; };
+		8AB8A266182EACDA0033C75A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AB8A264182EACDA0033C75A /* InfoPlist.strings */; };
+		8AB8A268182EACDA0033C75A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8A267182EACDA0033C75A /* main.m */; };
+		8AB8A26C182EACDA0033C75A /* KMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8A26B182EACDA0033C75A /* KMAppDelegate.m */; };
+		8AB8A26F182EACDA0033C75A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB8A26D182EACDA0033C75A /* Main.storyboard */; };
+		8AB8A272182EACDA0033C75A /* KMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8A271182EACDA0033C75A /* KMViewController.m */; };
+		8AB8A275182EACDA0033C75A /* KMMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8A274182EACDA0033C75A /* KMMyScene.m */; };
+		8AB8A277182EACDA0033C75A /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AB8A276182EACDA0033C75A /* Spaceship.png */; };
+		8AB8A279182EACDA0033C75A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB8A278182EACDA0033C75A /* Images.xcassets */; };
+		8AB8A280182EACDA0033C75A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB8A27F182EACDA0033C75A /* XCTest.framework */; };
+		8AB8A281182EACDA0033C75A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB8A259182EACDA0033C75A /* Foundation.framework */; };
+		8AB8A282182EACDA0033C75A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB8A25D182EACDA0033C75A /* UIKit.framework */; };
+		8AB8A28A182EACDA0033C75A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AB8A288182EACDA0033C75A /* InfoPlist.strings */; };
+		8AB8A28C182EACDA0033C75A /* FlickMarioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8A28B182EACDA0033C75A /* FlickMarioTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8AB8A283182EACDA0033C75A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AB8A24E182EACDA0033C75A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AB8A255182EACDA0033C75A;
+			remoteInfo = FlickMario;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8AB8A256182EACDA0033C75A /* FlickMario.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickMario.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AB8A259182EACDA0033C75A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8AB8A25B182EACDA0033C75A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8AB8A25D182EACDA0033C75A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8AB8A25F182EACDA0033C75A /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		8AB8A263182EACDA0033C75A /* FlickMario-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlickMario-Info.plist"; sourceTree = "<group>"; };
+		8AB8A265182EACDA0033C75A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8AB8A267182EACDA0033C75A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8AB8A269182EACDA0033C75A /* FlickMario-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlickMario-Prefix.pch"; sourceTree = "<group>"; };
+		8AB8A26A182EACDA0033C75A /* KMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMAppDelegate.h; sourceTree = "<group>"; };
+		8AB8A26B182EACDA0033C75A /* KMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMAppDelegate.m; sourceTree = "<group>"; };
+		8AB8A26E182EACDA0033C75A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8AB8A270182EACDA0033C75A /* KMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMViewController.h; sourceTree = "<group>"; };
+		8AB8A271182EACDA0033C75A /* KMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMViewController.m; sourceTree = "<group>"; };
+		8AB8A273182EACDA0033C75A /* KMMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMMyScene.h; sourceTree = "<group>"; };
+		8AB8A274182EACDA0033C75A /* KMMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMMyScene.m; sourceTree = "<group>"; };
+		8AB8A276182EACDA0033C75A /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		8AB8A278182EACDA0033C75A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8AB8A27E182EACDA0033C75A /* FlickMarioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickMarioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AB8A27F182EACDA0033C75A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8AB8A287182EACDA0033C75A /* FlickMarioTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlickMarioTests-Info.plist"; sourceTree = "<group>"; };
+		8AB8A289182EACDA0033C75A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8AB8A28B182EACDA0033C75A /* FlickMarioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickMarioTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AB8A253182EACDA0033C75A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB8A25C182EACDA0033C75A /* CoreGraphics.framework in Frameworks */,
+				8AB8A25E182EACDA0033C75A /* UIKit.framework in Frameworks */,
+				8AB8A260182EACDA0033C75A /* SpriteKit.framework in Frameworks */,
+				8AB8A25A182EACDA0033C75A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AB8A27B182EACDA0033C75A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB8A280182EACDA0033C75A /* XCTest.framework in Frameworks */,
+				8AB8A282182EACDA0033C75A /* UIKit.framework in Frameworks */,
+				8AB8A281182EACDA0033C75A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8AB8A24D182EACDA0033C75A = {
+			isa = PBXGroup;
+			children = (
+				8AB8A261182EACDA0033C75A /* FlickMario */,
+				8AB8A285182EACDA0033C75A /* FlickMarioTests */,
+				8AB8A258182EACDA0033C75A /* Frameworks */,
+				8AB8A257182EACDA0033C75A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8AB8A257182EACDA0033C75A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AB8A256182EACDA0033C75A /* FlickMario.app */,
+				8AB8A27E182EACDA0033C75A /* FlickMarioTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AB8A258182EACDA0033C75A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AB8A259182EACDA0033C75A /* Foundation.framework */,
+				8AB8A25B182EACDA0033C75A /* CoreGraphics.framework */,
+				8AB8A25D182EACDA0033C75A /* UIKit.framework */,
+				8AB8A25F182EACDA0033C75A /* SpriteKit.framework */,
+				8AB8A27F182EACDA0033C75A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8AB8A261182EACDA0033C75A /* FlickMario */ = {
+			isa = PBXGroup;
+			children = (
+				8AB8A26A182EACDA0033C75A /* KMAppDelegate.h */,
+				8AB8A26B182EACDA0033C75A /* KMAppDelegate.m */,
+				8AB8A26D182EACDA0033C75A /* Main.storyboard */,
+				8AB8A270182EACDA0033C75A /* KMViewController.h */,
+				8AB8A271182EACDA0033C75A /* KMViewController.m */,
+				8AB8A273182EACDA0033C75A /* KMMyScene.h */,
+				8AB8A274182EACDA0033C75A /* KMMyScene.m */,
+				8AB8A276182EACDA0033C75A /* Spaceship.png */,
+				8AB8A278182EACDA0033C75A /* Images.xcassets */,
+				8AB8A262182EACDA0033C75A /* Supporting Files */,
+			);
+			path = FlickMario;
+			sourceTree = "<group>";
+		};
+		8AB8A262182EACDA0033C75A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AB8A263182EACDA0033C75A /* FlickMario-Info.plist */,
+				8AB8A264182EACDA0033C75A /* InfoPlist.strings */,
+				8AB8A267182EACDA0033C75A /* main.m */,
+				8AB8A269182EACDA0033C75A /* FlickMario-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8AB8A285182EACDA0033C75A /* FlickMarioTests */ = {
+			isa = PBXGroup;
+			children = (
+				8AB8A28B182EACDA0033C75A /* FlickMarioTests.m */,
+				8AB8A286182EACDA0033C75A /* Supporting Files */,
+			);
+			path = FlickMarioTests;
+			sourceTree = "<group>";
+		};
+		8AB8A286182EACDA0033C75A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AB8A287182EACDA0033C75A /* FlickMarioTests-Info.plist */,
+				8AB8A288182EACDA0033C75A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8AB8A255182EACDA0033C75A /* FlickMario */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AB8A28F182EACDA0033C75A /* Build configuration list for PBXNativeTarget "FlickMario" */;
+			buildPhases = (
+				8AB8A252182EACDA0033C75A /* Sources */,
+				8AB8A253182EACDA0033C75A /* Frameworks */,
+				8AB8A254182EACDA0033C75A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlickMario;
+			productName = FlickMario;
+			productReference = 8AB8A256182EACDA0033C75A /* FlickMario.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8AB8A27D182EACDA0033C75A /* FlickMarioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AB8A292182EACDA0033C75A /* Build configuration list for PBXNativeTarget "FlickMarioTests" */;
+			buildPhases = (
+				8AB8A27A182EACDA0033C75A /* Sources */,
+				8AB8A27B182EACDA0033C75A /* Frameworks */,
+				8AB8A27C182EACDA0033C75A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AB8A284182EACDA0033C75A /* PBXTargetDependency */,
+			);
+			name = FlickMarioTests;
+			productName = FlickMarioTests;
+			productReference = 8AB8A27E182EACDA0033C75A /* FlickMarioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AB8A24E182EACDA0033C75A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KM;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = kenmaz;
+				TargetAttributes = {
+					8AB8A27D182EACDA0033C75A = {
+						TestTargetID = 8AB8A255182EACDA0033C75A;
+					};
+				};
+			};
+			buildConfigurationList = 8AB8A251182EACDA0033C75A /* Build configuration list for PBXProject "FlickMario" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8AB8A24D182EACDA0033C75A;
+			productRefGroup = 8AB8A257182EACDA0033C75A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8AB8A255182EACDA0033C75A /* FlickMario */,
+				8AB8A27D182EACDA0033C75A /* FlickMarioTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8AB8A254182EACDA0033C75A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB8A266182EACDA0033C75A /* InfoPlist.strings in Resources */,
+				8AB8A279182EACDA0033C75A /* Images.xcassets in Resources */,
+				8AB8A277182EACDA0033C75A /* Spaceship.png in Resources */,
+				8AB8A26F182EACDA0033C75A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AB8A27C182EACDA0033C75A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB8A28A182EACDA0033C75A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AB8A252182EACDA0033C75A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB8A272182EACDA0033C75A /* KMViewController.m in Sources */,
+				8AB8A26C182EACDA0033C75A /* KMAppDelegate.m in Sources */,
+				8AB8A275182EACDA0033C75A /* KMMyScene.m in Sources */,
+				8AB8A268182EACDA0033C75A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AB8A27A182EACDA0033C75A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB8A28C182EACDA0033C75A /* FlickMarioTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8AB8A284182EACDA0033C75A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AB8A255182EACDA0033C75A /* FlickMario */;
+			targetProxy = 8AB8A283182EACDA0033C75A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8AB8A264182EACDA0033C75A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AB8A265182EACDA0033C75A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8AB8A26D182EACDA0033C75A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AB8A26E182EACDA0033C75A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8AB8A288182EACDA0033C75A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AB8A289182EACDA0033C75A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8AB8A28D182EACDA0033C75A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8AB8A28E182EACDA0033C75A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8AB8A290182EACDA0033C75A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlickMario/FlickMario-Prefix.pch";
+				INFOPLIST_FILE = "FlickMario/FlickMario-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8AB8A291182EACDA0033C75A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlickMario/FlickMario-Prefix.pch";
+				INFOPLIST_FILE = "FlickMario/FlickMario-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8AB8A293182EACDA0033C75A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlickMario.app/FlickMario";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlickMario/FlickMario-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FlickMarioTests/FlickMarioTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8AB8A294182EACDA0033C75A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlickMario.app/FlickMario";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlickMario/FlickMario-Prefix.pch";
+				INFOPLIST_FILE = "FlickMarioTests/FlickMarioTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AB8A251182EACDA0033C75A /* Build configuration list for PBXProject "FlickMario" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AB8A28D182EACDA0033C75A /* Debug */,
+				8AB8A28E182EACDA0033C75A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AB8A28F182EACDA0033C75A /* Build configuration list for PBXNativeTarget "FlickMario" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AB8A290182EACDA0033C75A /* Debug */,
+				8AB8A291182EACDA0033C75A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8AB8A292182EACDA0033C75A /* Build configuration list for PBXNativeTarget "FlickMarioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AB8A293182EACDA0033C75A /* Debug */,
+				8AB8A294182EACDA0033C75A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8AB8A24E182EACDA0033C75A /* Project object */;
+}
