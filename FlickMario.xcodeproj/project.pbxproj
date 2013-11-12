@@ -24,6 +24,7 @@
 		8AB8A282182EACDA0033C75A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB8A25D182EACDA0033C75A /* UIKit.framework */; };
 		8AB8A28A182EACDA0033C75A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AB8A288182EACDA0033C75A /* InfoPlist.strings */; };
 		8AB8A28C182EACDA0033C75A /* FlickMarioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8A28B182EACDA0033C75A /* FlickMarioTests.m */; };
+		8AB8A297182FF4550033C75A /* KMEnemyNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8A296182FF4550033C75A /* KMEnemyNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		8AB8A287182EACDA0033C75A /* FlickMarioTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlickMarioTests-Info.plist"; sourceTree = "<group>"; };
 		8AB8A289182EACDA0033C75A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8AB8A28B182EACDA0033C75A /* FlickMarioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickMarioTests.m; sourceTree = "<group>"; };
+		8AB8A295182FF4550033C75A /* KMEnemyNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMEnemyNode.h; sourceTree = "<group>"; };
+		8AB8A296182FF4550033C75A /* KMEnemyNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMEnemyNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				8AB8A271182EACDA0033C75A /* KMViewController.m */,
 				8AB8A273182EACDA0033C75A /* KMMyScene.h */,
 				8AB8A274182EACDA0033C75A /* KMMyScene.m */,
+				8AB8A295182FF4550033C75A /* KMEnemyNode.h */,
+				8AB8A296182FF4550033C75A /* KMEnemyNode.m */,
 				8AB8A276182EACDA0033C75A /* Spaceship.png */,
 				8AB8A278182EACDA0033C75A /* Images.xcassets */,
 				8AB8A262182EACDA0033C75A /* Supporting Files */,
@@ -265,6 +270,7 @@
 			files = (
 				8AB8A272182EACDA0033C75A /* KMViewController.m in Sources */,
 				8AB8A26C182EACDA0033C75A /* KMAppDelegate.m in Sources */,
+				8AB8A297182FF4550033C75A /* KMEnemyNode.m in Sources */,
 				8AB8A275182EACDA0033C75A /* KMMyScene.m in Sources */,
 				8AB8A268182EACDA0033C75A /* main.m in Sources */,
 			);
