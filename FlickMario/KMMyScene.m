@@ -36,7 +36,7 @@ static const uint32_t goldCategory = 0x1 << 3;
     self.physicsWorld.contactDelegate = self;
 
     //start point
-    [self addPlateWithSize:CGSizeMake(50, 10) point:CGPointMake(300, self.size.height - 50)];
+    [self addPlateWithSize:CGSizeMake(50, 3) point:CGPointMake(300, self.size.height - 50)];
 
     for (int i = 0; i < 20; i++) {
         for (int j = 0; j < 2; j++) {
@@ -49,7 +49,7 @@ static const uint32_t goldCategory = 0x1 << 3;
         }
     }
     
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 30; i++) {
         [self addGold];
     }
     
@@ -75,7 +75,7 @@ static const uint32_t goldCategory = 0x1 << 3;
     mario.physicsBody.allowsRotation = NO;
     mario.physicsBody.mass = 60;
     mario.physicsBody.categoryBitMask = marioCategory;
-    mario.physicsBody.collisionBitMask = enemyCategory | goldCategory;
+    mario.physicsBody.collisionBitMask = enemyCategory;
     mario.physicsBody.contactTestBitMask = enemyCategory | goldCategory;
     return mario;
 }
@@ -119,8 +119,8 @@ static const uint32_t goldCategory = 0x1 << 3;
                                                                    [enemy.physicsBody applyForce:CGVectorMake(moveX, 0)];
                                                                }],
                                                                 ]]];
-    [enemy removeAllActions];
-    [enemy runAction:moveEnemyAction];
+    [enemy removeActionForKey:@"move"];
+    [enemy runAction:moveEnemyAction withKey:@"move"];
 }
 
 - (void)moveEnemyReverse:(KMEnemyNode*)enemy {
@@ -129,23 +129,33 @@ static const uint32_t goldCategory = 0x1 << 3;
 }
 
 - (void)addGold {
-    SKSpriteNode* enemy = [[SKSpriteNode alloc] initWithColor:[SKColor yellowColor] size:CGSizeMake(10, 10)];
-    enemy.name = @"gold";
-    enemy.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:enemy.size];
-    enemy.physicsBody.dynamic = NO;
-    enemy.physicsBody.affectedByGravity = NO;
-    enemy.physicsBody.categoryBitMask = goldCategory;
-    enemy.physicsBody.collisionBitMask = marioCategory;
-    enemy.physicsBody.contactTestBitMask = marioCategory;
+    SKSpriteNode* gold = [[SKSpriteNode alloc] initWithColor:[SKColor yellowColor] size:CGSizeMake(7, 10)];
+    gold.name = @"gold";
+    gold.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:gold.size];
+    gold.physicsBody.dynamic = NO;
+    gold.physicsBody.affectedByGravity = NO;
+    gold.physicsBody.categoryBitMask = goldCategory;
+    gold.physicsBody.collisionBitMask = marioCategory;
+    gold.physicsBody.contactTestBitMask = marioCategory;
     
     int x = arc4random() % (int)self.size.width;
-    int y = arc4random() % (int)self.size.height;
+    int y = arc4random() % (int)((self.size.height - 20) / 30); //上20pxはスタート地点とかぶるので避ける
     
-    enemy.position = CGPointMake(x, y);
-    [self addChild:enemy];
+    gold.position = CGPointMake(x, y * 30 + 15); //plateより15px上
+    [self addChild:gold];
+    
+    int blinkWait = arc4random() % 5;
+    
+    [gold runAction:[SKAction repeatActionForever:[SKAction sequence:@
+                                                   [
+                                                    [SKAction waitForDuration:blinkWait + 5],
+                                                    [SKAction colorizeWithColor:[SKColor whiteColor] colorBlendFactor:1.0 duration:0.1],
+                                                    [SKAction waitForDuration:0.25],
+                                                    [SKAction colorizeWithColor:[SKColor yellowColor] colorBlendFactor:1.0 duration:0.1],
+                                                   ]]]];
 }
 
-static const float touchSensitivity = 200.0;
+static const float touchSensitivity = 150.0;
 static const float adjust = 50;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -184,6 +194,11 @@ static const float adjust = 50;
     }
     
     if (bodyA.categoryBitMask == marioCategory && bodyB.categoryBitMask == enemyCategory) {
+        bodyA.velocity = CGVectorMake(0, 0);
+        bodyB.velocity = CGVectorMake(0, 0);
+        bodyA.affectedByGravity = NO;
+        bodyB.affectedByGravity = NO;
+        
         SKLabelNode* label = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         label.text = @"Game Over";
         label.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
@@ -217,6 +232,7 @@ static const float adjust = 50;
         [self moveEnemyReverse:(KMEnemyNode*)contact.bodyB.node];
     }
 }
+
 - (void)didEndContact:(SKPhysicsContact *)contact {
     
 }
@@ -237,6 +253,13 @@ static const float adjust = 50;
                 [self moveEnemyReverse:(KMEnemyNode*)node];
             }];
         }
+    }];
+}
+
+- (void)update:(NSTimeInterval)currentTime {
+    [self enumerateChildNodesWithName:@"enemy" usingBlock:^(SKNode *_node, BOOL *stop) {
+        KMEnemyNode* enemy = (KMEnemyNode*)_node;
+        [enemy checkALiveWithCurrentTime:currentTime];
     }];
 }
 

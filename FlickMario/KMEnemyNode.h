@@ -15,4 +15,7 @@ typedef NS_ENUM(NSInteger, KMEnemyDirection){
 
 @interface KMEnemyNode : SKSpriteNode
 @property KMEnemyDirection direction;
+@property NSTimeInterval birthTime;
+
+- (void)checkALiveWithCurrentTime:(NSTimeInterval)currentTime;
 @end
